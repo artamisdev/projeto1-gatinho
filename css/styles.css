@@ -1,0 +1,35 @@
+
+#iniciar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btns {
+}
+
+.options {
+    width: 200px;
+    opacity: 0.4;
+    display: flex;
+}
+
+.options:hover {
+    background-color: yellow;
+  }
+
+
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 1000px;
+    background-image: url("../assets/Screenshot\ 2022-08-22\ at\ 09.55.08.png");
+}
+
+
+.hide {
+    display: none;
+}

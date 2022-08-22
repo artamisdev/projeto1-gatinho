@@ -8,10 +8,24 @@ const inputName = document.querySelector("#iniciar input");
 const buttonStart = document.querySelector("#start")
 
 
-//iterando a array, criando buttons, add id e class e apendendo na btns
+// esconder a página 1, quando clicar no botao de começar
 
-let cat = ["gato", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-cat.forEach((element)=>{
+// MEU CODIGO AQUI
+
+
+
+let cat = ["gato", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+//Randomizando os buttons 
+
+let sortedCat = cat.sort(() => {
+    return Math.random() - 0.5;
+  });
+
+console.log(sortedCat)
+
+//iterando a array, criando buttons, add id e class e apendendo na btns
+sortedCat.forEach((element)=>{
     let button = document.createElement("button") //<button>
     button.id = element
     button.classList.add("options")
@@ -25,13 +39,10 @@ cat.forEach((element)=>{
 
     } else (console.log("Não é o gato, tente novamente")
     )
-}) 
 })
+}) 
 
 const options = document.querySelectorAll(".options")
-
-console.log(options)
-
 
 // quando eu clico para começar e ele exige um nome, e faz com que apareça meu deck 
 
@@ -43,7 +54,5 @@ buttonStart.addEventListener("click", () => {
 })
 
 
-
-
-
+// checando status
   

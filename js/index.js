@@ -1,14 +1,17 @@
 
 
-const game = new catchCat
+const game = new catchCat()
 
 const btns = document.querySelector("#btns")
 const chances = document.querySelector("#chances")
 const inputName = document.querySelector("#iniciar input");
+const inicio = document.querySelector("#iniciar")
 const buttonStart = document.querySelector("#start")
-
+const show = document.querySelector(".show")
 
 // esconder a página 1, quando clicar no botao de começar
+
+
 
 // MEU CODIGO AQUI
 
@@ -37,8 +40,12 @@ sortedCat.forEach((element)=>{
     if (element === "gato"){
         console.log("É o gato! Parabéns!")
 
-    } else (console.log("Não é o gato, tente novamente")
-    )
+    } else {
+        game.loosePoints(); // funçao de retirar os pontos 
+        chances.innerText = game.points; 
+        console.log("Não é o gato, tente novamente")
+
+    }
 })
 }) 
 
@@ -51,8 +58,18 @@ buttonStart.addEventListener("click", () => {
         return;
     }
     btns.classList.remove("hide")
+
+    inicio.classList.add(`hide`)
+    inicio.classList.remove(`show`)
+    
 })
 
 
 // checando status
-  
+
+//setar o userName do atributo da classe
+game.name = inputName.value;
+//adicionar o nome na div score
+inputName.innerText = game.userName;
+//adicionar os points na div score
+chances.innerText = game.points;

@@ -1,6 +1,7 @@
 class catchCat {
     constructor(){
-        this.name = "name"
+        this.name = "name";
+        this.points = 7;
     }
 
     randombuttons() {
@@ -9,6 +10,28 @@ class catchCat {
       })
     }
 
+    points() {
+        chances.innerText = this.points;
+    }
+
+    loosePoints() {
+        this.points--
+
+        this.checkGame()
+    }
+
+    checkGame() {
+        if (this.points === 0){
+            console.log("VOCÊ PERDEU")
+        } 
+        if (element === "gato"){
+            console.log("VOCÊ GANHOU")
+        }
+    }
+
+
 }
+
+
 
 

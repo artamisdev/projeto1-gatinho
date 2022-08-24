@@ -8,16 +8,13 @@ const inputName = document.querySelector("#iniciar input");
 const inicio = document.querySelector("#iniciar")
 const buttonStart = document.querySelector("#start")
 const show = document.querySelector(".show")
-
-// esconder a página 1, quando clicar no botao de começar
-
-
-
-// MEU CODIGO AQUI
+const userName = document.querySelector("#name")
+const win = document.querySelector("#win")
+const loose = document.querySelector("#loose")
+const checkpont = document.querySelector(".checkpont")
 
 
-
-let cat = ["gato", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+let cat = ["gato", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 //Randomizando os buttons 
 
@@ -28,6 +25,7 @@ let sortedCat = cat.sort(() => {
 console.log(sortedCat)
 
 //iterando a array, criando buttons, add id e class e apendendo na btns
+
 sortedCat.forEach((element)=>{
     let button = document.createElement("button") //<button>
     button.id = element
@@ -35,19 +33,28 @@ sortedCat.forEach((element)=>{
     btns.appendChild(button)
 
     // quando clicar diz se é o gato ou nao
-
     button.addEventListener("click", () => {
-    if (element === "gato"){
-        console.log("É o gato! Parabéns!")
+        console.log(element)
+    if (element === "gato"){ 
 
+        //quando ganhar, apagar o board e dar show na div "win"
+        game.wincatchcat();
+    
     } else {
-        game.loosePoints(); // funçao de retirar os pontos 
+        // funçao de retirar os pontos 
+        game.loosePoints(); 
         chances.innerText = game.points; 
-        console.log("Não é o gato, tente novamente")
 
+        console.log("Não é o gato")
+        
+        //checar quantas vidas o jogador tem e se ele tiver zerado, terminar o jogo
     }
+    })
 })
-}) 
+
+// checkpont.classList.add(`show`)
+// checkpont.classList.remove(`hide`)
+
 
 const options = document.querySelectorAll(".options")
 
@@ -57,19 +64,40 @@ buttonStart.addEventListener("click", () => {
     if (inputName.value === "") {
         return;
     }
+    
     btns.classList.remove("hide")
 
     inicio.classList.add(`hide`)
     inicio.classList.remove(`show`)
     
+    game.name = inputName.value
+
+    userName.innerText = game.name
+    
 })
+
+//adicionar os points na div score
+chances.innerText = game.points;
+
+const replay = document.querySelector(".replay")
+
+replay.addEventListener("click",()=>{
+    
+    let sortedCat = cat.sort(() => {
+        return Math.random() - 0.5;
+      });
+
+    chances.innerText = game.points;
+    location.reload()
+})
+
+
+
+//backgroud image do button
+
 
 
 // checando status
 
-//setar o userName do atributo da classe
-game.name = inputName.value;
+
 //adicionar o nome na div score
-inputName.innerText = game.userName;
-//adicionar os points na div score
-chances.innerText = game.points;

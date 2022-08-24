@@ -79,6 +79,7 @@
   outline: 0;
 }
 
+
 @media (min-width: 768px) {
   .button-56 {
     padding: 0 40px;
@@ -90,8 +91,9 @@
 
 .options {
     width: 200px;
-    opacity: 0.4;
+    opacity: 0.2;
     display: flex;
+    border-radius: 30px;
 }
 
 .options:hover {
@@ -103,7 +105,9 @@
     flex-wrap: wrap;
     width: 600px;
     height: 640px;
-    background-image: url("../back0.png");
+    background-size: cover;
+    background-image: url("../assets/background/back0.png");
+    border-radius: 30px;
 }
 
 
@@ -114,4 +118,32 @@
 
 body {
     background-color: rgb(255, 182, 193);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#loose {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("../assets/memes/Screenshot\ 2022-08-23\ at\ 14.51.56.png")
+}
+
+
+#win {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("../assets/woncat/wonpicture2.jpg");
+} 
+
+.loo {
+    width: 100px ;
+    height: 40px;
+}
+
+.wiin {
+    width: 100px ;
+    height: 40px;
 }

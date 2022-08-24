@@ -15,23 +15,31 @@ class catchCat {
     }
 
     loosePoints() {
-        this.points--
+        game.points--
+        if (game.points === 0){
+            window.alert("PERDEEEUU KKKKKKKK")
 
-        this.checkGame()
-    }
-
-    checkGame() {
-        if (this.points === 0){
-            console.log("VOCÊ PERDEU")
+            //apagar o board e mostrar a div loose
+            btns.classList.add(`hide`)
+            btns.classList.remove(`show`)
+            loose.classList.add(`show`)
+            loose.classList.remove(`hide`)
         } 
-        if (element === "gato"){
-            console.log("VOCÊ GANHOU")
-        }
+    }  
+
+    wincatchcat(){
+    
+        btns.classList.add(`hide`)
+        btns.classList.remove(`show`)
+        win.classList.add(`show`)
+        win.classList.remove(`hide`)
+
+        window.alert("É o gato! Parabéns!")
+        
+       }
     }
 
 
-}
-
-
+    
 
 

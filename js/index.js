@@ -11,8 +11,9 @@ const show = document.querySelector(".show")
 const userName = document.querySelector("#name")
 const win = document.querySelector("#win")
 const loose = document.querySelector("#loose")
-const checkpont = document.querySelector(".checkpont")
-
+const checkpont = document.querySelector("#checkpont")
+const congrats = document.querySelector("#congrats")
+const lamento = document.querySelector("#lamento")
 
 let cat = ["gato", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
@@ -34,16 +35,18 @@ sortedCat.forEach((element)=>{
 
     // quando clicar diz se é o gato ou nao
     button.addEventListener("click", () => {
-        console.log(element)
-    if (element === "gato"){ 
+     if (element === "gato"){ 
 
         //quando ganhar, apagar o board e dar show na div "win"
         game.wincatchcat();
-    
+
+        // randomizando win imgs
+       
     } else {
+
         // funçao de retirar os pontos 
         game.loosePoints(); 
-        chances.innerText = game.points; 
+        chances.innerText = game.points;
 
         console.log("Não é o gato")
         
@@ -69,7 +72,8 @@ buttonStart.addEventListener("click", () => {
 
     inicio.classList.add(`hide`)
     inicio.classList.remove(`show`)
-    
+    game.checkUsuario()
+
     game.name = inputName.value
 
     userName.innerText = game.name
@@ -80,20 +84,23 @@ buttonStart.addEventListener("click", () => {
 chances.innerText = game.points;
 
 const replay = document.querySelector(".replay")
+const replay2 = document.querySelector(".replay2")
 
-replay.addEventListener("click",()=>{
+  replay.addEventListener("click",()=>{
     
-    let sortedCat = cat.sort(() => {
-        return Math.random() - 0.5;
-      });
-
-    chances.innerText = game.points;
+    location.reload()
+})
+replay2.addEventListener("click",()=>{
+     
     location.reload()
 })
 
 
 
+
 //backgroud image do button
+
+
 
 
 

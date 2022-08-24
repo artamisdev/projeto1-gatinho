@@ -10,11 +10,13 @@
 <body>
 
    <div id="iniciar" class="show iniciar"  >
-        <h1><label>Oi! Qual é o seu nome?</label>
+        <h1>
+        Oi! Qual é o seu nome?
         <input type="text"/>
-        </h1>
-        <p>O meu gatinho desapareceu!</p>
-           <h2>Me ajude a encontra-lo! </h2>
+        </h1> 
+         <br>
+        <p class="p">O meu gatinho desapareceu! :(</p>
+           <h2>Me ajude a encontrá-lo! </h2>
         
 
         <button id="start" class="button-56" role="button">Começar</button>
@@ -24,30 +26,41 @@
    <br>
 
     <div id="btns" class="hide board">
-       
     </div>
+
     <br>
-     
-      <div class="checkpont" class="hide">
+    
+      <div id="checkpont" class="hide">
         <p>
-          Olá <span id="name"></span>!
-           Você tem
-          <span id="chances">7</span> VIDAS!
+           Olá <span id="name"></span>!
+           Você tem<span id="chances">7</span> VIDAS!
         </p>
       </div>
       
-      <div id="win" class="hide"> 
-        <form>
-          <button class="wiin" class="replay">Tentar novamente!</button>
-        </form>
-      </div>
-      
-      
+     <div class="hide" id="congrats">
+      <p>PARABÉNS! VOCÊ O ENCONTROU!</p>
+    </div>
+
+     <div class="hide" id="lamento">
+      <p>Ah, você não o encontrou :(<br> 
+      Vamos tentar mais uma vez?</p>
+    </div>
+
+      <div id="win" class="hide">
+        <div id="winimg"></div>
+          <button class="wiin replay2 button-50" role="button">Tentar novamente!</button>
+    </div>
+
       <div id="loose" class="hide">
-        <form>
-          <button class="loo" class="replay">Tentar novamente!</button>
-        </form>
-      </div>
+        <div id="looseimg"></div>   
+         <button class="loo replay">Tentar novamente!</button>
+    </div>
+
+     
+
+
+
+
 
     <script src="./js/catchCat.js"></script>
     <script src="./js/index.js"></script>

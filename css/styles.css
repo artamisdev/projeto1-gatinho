@@ -4,6 +4,25 @@
     font-family: 'DynaPuff', cursive;
 }
 
+
+#congrats {
+    font-size: 50px;
+    border: 0px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.p {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    font-size: 35px;
+}
 .iniciar {
 
     width: 1000px;
@@ -79,25 +98,22 @@
   outline: 0;
 }
 
-
 @media (min-width: 768px) {
   .button-56 {
     padding: 0 40px;
   }
 }
 
-#btns {
-}
-
 .options {
     width: 200px;
-    opacity: 0.2;
+    opacity: 0.1;
     display: flex;
     border-radius: 30px;
+
 }
 
 .options:hover {
-    background-color: antiquewhite;
+    background-color: red;
   }
 
 .board {
@@ -108,6 +124,7 @@
     background-size: cover;
     background-image: url("../assets/background/back0.png");
     border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 15px;
 }
 
 
@@ -123,27 +140,139 @@ body {
     align-items: center;
 }
 
-#loose {
-    width: 100vw;
-    height: 100vh;
+#looseimg {
+    width: 560px;
+    height: 580px;
     background-size: cover;
-    background-image: url("../assets/memes/Screenshot\ 2022-08-23\ at\ 14.51.56.png")
+    background-image: url("../assets/memes/meme1.png");
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 30px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 
-#win {
-    width: 100vw;
-    height: 100vh;
+#winimg {
+    width: 560px;
+    height: 580px;
     background-size: cover;
     background-image: url("../assets/woncat/wonpicture2.jpg");
+    border-radius: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 } 
 
-.loo {
-    width: 100px ;
-    height: 40px;
+#congrats {
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+
 }
 
+.loo {
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'DynaPuff', cursive;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .button-50:focus {
+    text-decoration: none;
+  }
+  
+  .button-50:hover {
+    text-decoration: none;
+  }
+  
+  .button-50:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+  }
+  
+  .button-50:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+  }
+  
+  @media (min-width: 768px) {
+    .button-50 {
+      padding: 12px 50px;
+    }
+  }
+
+
 .wiin {
-    width: 100px ;
-    height: 40px;
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'DynaPuff', cursive;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-50:focus {
+  text-decoration: none;
+}
+
+.button-50:hover {
+  text-decoration: none;
+}
+
+.button-50:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-50:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}
+
+#checkpont span {
+   font-size: x-large;
+    
 }

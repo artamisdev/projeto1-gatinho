@@ -14,16 +14,29 @@ class catchCat {
         chances.innerText = this.points;
     }
 
+    checkUsuario(){
+        checkpont.classList.remove("hide")
+        checkpont.classList.add("show")
+    }
+
+
     loosePoints() {
         game.points--
         if (game.points === 0){
-            window.alert("PERDEEEUU KKKKKKKK")
-
+           
             //apagar o board e mostrar a div loose
             btns.classList.add(`hide`)
             btns.classList.remove(`show`)
+
             loose.classList.add(`show`)
             loose.classList.remove(`hide`)
+
+            lamento.classList.remove("hide")
+            lamento.classList.add("show")
+
+            checkpont.classList.remove("show")
+            checkpont.classList.add("hide")
+        
         } 
     }  
 
@@ -31,11 +44,16 @@ class catchCat {
     
         btns.classList.add(`hide`)
         btns.classList.remove(`show`)
+
         win.classList.add(`show`)
         win.classList.remove(`hide`)
 
-        window.alert("É o gato! Parabéns!")
-        
+        congrats.classList.remove("hide")
+        congrats.classList.add("show")
+
+        checkpont.classList.remove("show")
+        checkpont.classList.add("hide")
+
        }
     }
 

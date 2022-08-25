@@ -6,7 +6,6 @@ class catchCat {
             "./assets/woncat/wonpicture1.jpg",
             "./assets/woncat/wonpicture2.jpg",
             "./assets/woncat/wonpicture3.jpg",
-           " ./assets/woncat/wonpicture4.jpg",
             "./assets/woncat/wonpicture5.jpg",
             "./assets/woncat/wonpicture6.jpg",
             "./assets/woncat/wonpicture7.jpg",

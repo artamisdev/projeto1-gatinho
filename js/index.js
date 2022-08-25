@@ -15,7 +15,8 @@ const checkpont = document.querySelector("#checkpont")
 const congrats = document.querySelector("#congrats")
 const lamento = document.querySelector("#lamento")
 
-let cat = ["gato", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+let cat = ["gato", "um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez", "onze"]
 
 //Randomizando os buttons 
 
@@ -32,14 +33,11 @@ sortedCat.forEach((element)=>{
     button.id = element
     button.classList.add("options")
     btns.appendChild(button)
-
     // quando clicar diz se é o gato ou nao
     button.addEventListener("click", () => {
      if (element === "gato"){ 
-
         //quando ganhar, apagar o board e dar show na div "win"
         game.wincatchcat();
-
         // randomizando win imgs
        
     } else {
@@ -47,12 +45,22 @@ sortedCat.forEach((element)=>{
         // funçao de retirar os pontos 
         game.loosePoints(); 
         chances.innerText = game.points;
-
+    
         console.log("Não é o gato")
         
         //checar quantas vidas o jogador tem e se ele tiver zerado, terminar o jogo
     }
     })
+})
+ 
+const um = document.querySelector("#um")
+
+um.addEventListener("click", () => {
+    setTimeout(() => {
+        um.classList.add("show")
+
+    }, 500);
+    
 })
 
 // checkpont.classList.add(`show`)
@@ -69,7 +77,7 @@ buttonStart.addEventListener("click", () => {
     }
     
     btns.classList.remove("hide")
-
+    
     inicio.classList.add(`hide`)
     inicio.classList.remove(`show`)
     game.checkUsuario()
@@ -83,6 +91,7 @@ buttonStart.addEventListener("click", () => {
 //adicionar os points na div score
 chances.innerText = game.points;
 
+//reloads 
 const replay = document.querySelector(".replay")
 const replay2 = document.querySelector(".replay2")
 
@@ -96,15 +105,7 @@ replay2.addEventListener("click",()=>{
 })
 
 
-
-
-//backgroud image do button
-
+//backgroud image do buttons
 
 
 
-
-// checando status
-
-
-//adicionar o nome na div score

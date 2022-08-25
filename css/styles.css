@@ -106,11 +106,12 @@ h1 {
 
 .options {
     width: 200px;
-    opacity: 0.1;
+    opacity: 0.3;
     display: flex;
     border-radius: 30px;
 
 }
+
 
 .options:hover {
     background-color: red;
@@ -165,7 +166,6 @@ body {
 
 #congrats {
     font-size: 20px;
-    font-family: 'Fredoka One', cursive;
 
 }
 
@@ -275,4 +275,15 @@ body {
 #checkpont span {
    font-size: x-large;
     
+}
+
+#um {
+    background-image: url("../assets/memesbuttons/meme12.gif")
+}
+
+#dois { 
+    background-size: cover;
+    background-image: url("../assets/memesbuttons/meme11.png6 ")
+   
+
 }

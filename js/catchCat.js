@@ -2,6 +2,7 @@ class catchCat {
     constructor(){
         this.name = "name";
         this.points = 7;
+        
     }
 
     randombuttons() {

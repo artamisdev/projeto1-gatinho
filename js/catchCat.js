@@ -2,7 +2,25 @@ class catchCat {
     constructor(){
         this.name = "name";
         this.points = 7;
-        
+        this.won = [
+            "./assets/woncat/wonpicture1.jpg",
+            "./assets/woncat/wonpicture2.jpg",
+            "./assets/woncat/wonpicture3.jpg",
+           " ./assets/woncat/wonpicture4.jpg",
+            "./assets/woncat/wonpicture5.jpg",
+            "./assets/woncat/wonpicture6.jpg",
+            "./assets/woncat/wonpicture7.jpg",
+           " ./assets/woncat/wonpicture8.jpg",
+            "./assets/woncat/wonpicture9.jpg",
+            "./assets/woncat/wonpicture10.jpg"
+        ]
+
+        this.loose = [
+            "./assets/memesloose/meme3.png",
+            "./assets/memesloose/meme5.png",
+            "./assets/memesloose/meme6.png",
+            "./assets/memesloose/meme9.png"
+        ]
     }
 
     randombuttons() {
@@ -42,7 +60,8 @@ class catchCat {
     }  
 
     wincatchcat(){
-    
+
+
         btns.classList.add(`hide`)
         btns.classList.remove(`show`)
 

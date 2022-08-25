@@ -9,15 +9,18 @@
 </head>
 <body>
 
-   <div id="iniciar" class="show iniciar"  >
+   <div id="iniciar" class="show iniciar">
+    <audio src=""></audio>
         <h1>
         Oi! Qual é o seu nome?
         <input type="text"/>
         </h1> 
-         <br>
-        <p class="p">O meu gatinho desapareceu! :(</p>
-           <h2>Me ajude a encontrá-lo! </h2>
-        
+         <br><img class="morgan"/>
+        <p class="p">O meu gatinho, desapareceu! :(</p>
+            
+           <h2>Me ajude a encontrar o Morgan! :) </h2>
+         
+           
 
         <button id="start" class="button-56" role="button">Começar</button>
    </div>
@@ -26,7 +29,7 @@
    <br>
 
     <div id="btns" class="hide board">
-      <!-- <img src="./assets/memes/meme7.png" alt="cat" class="bobo hide"/> -->
+     
     </div>
 
 
@@ -35,13 +38,13 @@
     
       <div id="checkpont" class="hide">
         <p>
-           Olá <span id="name"></span>!
-           Você tem<span id="chances">7</span> VIDAS!
+            <span id="name"></span> 
+            , você tem <span id="chances"> 7 </span> VIDAS!
         </p>
       </div>
       
      <div class="hide" id="congrats">
-      <p>PARABÉNS! VOCÊ O ENCONTROU!</p>
+      <p>PARABÉNS! VOCÊ ENCONTROU O MORGAN!</p>
     </div>
 
      <div class="hide" id="lamento">
@@ -50,13 +53,23 @@
     </div>
 
       <div id="win" class="hide">
-        <div id="winimg"></div>
+
+        <div id="winimg">
+          <img src="./assets/woncat/wonpicture1.jpg" alt="randomcat" class="randomwon"/>
+        </div>
+
+        <div class="organizador">
           <button class="wiin replay2 button-50" role="button">Tentar novamente!</button>
+        </div>
     </div>
 
       <div id="loose" class="hide">
-        <div id="looseimg"></div>   
+        <div id="looseimg">
+          <img src="./assets/memesloose/meme3.png" alt="randomloose" class="randomloose" />
+        </div>   
+        <div class="organizador">
          <button class="loo replay">Tentar novamente!</button>
+        </div>
     </div>
 
     

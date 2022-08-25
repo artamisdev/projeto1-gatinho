@@ -18,8 +18,9 @@ class catchCat {
             "./assets/memesloose/meme3.png",
             "./assets/memesloose/meme5.png",
             "./assets/memesloose/meme6.png",
-            "./assets/memesloose/meme9.png"
+            "./assets/memesloose/nemeunacausa.png"
         ]
+
     }
 
     randombuttons() {
@@ -54,6 +55,8 @@ class catchCat {
 
             checkpont.classList.remove("show")
             checkpont.classList.add("hide")
+
+            lostmusic.play()
         
         } 
     }  

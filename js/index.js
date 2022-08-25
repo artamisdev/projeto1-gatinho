@@ -8,8 +8,10 @@ const errou7 = new Audio("./assets/sounds/buttons/Warpy.mp3")
 const errou8 = new Audio("./assets/sounds/buttons/rodrigoFaro.mp3")
 const errou9 = new Audio("./assets/sounds/buttons/sumiu.mp3")
 const errou10 = new Audio("./assets/sounds/buttons/tuecego.mp3")
-const errou11 = new Audio("./assets/sounds/buttons/narutofunk.mp3")
+// const errou11 = new Audio("./assets/sounds/buttons/narutofunk.mp3")
 
+const ronron = new Audio("./assets/sounds/win/ronron.mp3")
+const lostmusic = new Audio("./assets/sounds/loose/fonn.mp3")
 
 const game = new catchCat()
 
@@ -35,7 +37,7 @@ let sortedCat = cat.sort(() => {
     return Math.random() - 0.5;
   });
 
-console.log(sortedCat)
+    console.log(sortedCat)
 
 //iterando a array, criando buttons, add id e class e apendendo na btns
 
@@ -50,6 +52,7 @@ sortedCat.forEach((element)=>{
         //quando ganhar, apagar o board e dar show na div "win"
         game.wincatchcat();
 
+        ronron.play()
         // randomizando win imgs
         let randomwon = game.won
         let randomimgwon = document.querySelector(".randomwon")
@@ -60,13 +63,13 @@ sortedCat.forEach((element)=>{
 
         randomimgwon.src = randomwon[0]
 
-      
-        
     } else {
 
         // funçao de retirar os pontos 
         game.loosePoints(); 
         chances.innerText = game.points;
+
+        
 
         let lloose = game.loose
         let randomimgloose = document.querySelector(".randomloose")
@@ -74,14 +77,9 @@ sortedCat.forEach((element)=>{
         lloose = lloose.sort(() => {
             return Math.random() - 0.5;    
         });
-
+         
         randomimgloose.src = lloose[0]
-
-       
-
-console.log("Não é o gato")
         
-        //checar quantas vidas o jogador tem e se ele tiver zerado, terminar o jogo
     }
     })
 })
@@ -233,3 +231,4 @@ const replay2 = document.querySelector(".replay2")
     location.reload()
 })
 
+iniciar.Audio()

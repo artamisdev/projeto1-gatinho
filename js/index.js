@@ -8,7 +8,7 @@ const errou7 = new Audio("./assets/sounds/buttons/Warpy.mp3")
 const errou8 = new Audio("./assets/sounds/buttons/rodrigoFaro.mp3")
 const errou9 = new Audio("./assets/sounds/buttons/sumiu.mp3")
 const errou10 = new Audio("./assets/sounds/buttons/tuecego.mp3")
-// const errou11 = new Audio("./assets/sounds/buttons/narutofunk.mp3")
+const errou11 = new Audio("./assets/sounds/buttons/naruto.mp3")
 
 const ronron = new Audio("./assets/sounds/win/ronron.mp3")
 const lostmusic = new Audio("./assets/sounds/loose/fonn.mp3")
@@ -107,7 +107,7 @@ um.addEventListener('click', () => {
     um.classList.add('soaparecequandoclica1');
     setTimeout(() => {
       um.classList.remove('soaparecequandoclica1');
-    }, 2500);
+    }, 2200);
   });
 
   dois.addEventListener('click', () => {
@@ -116,7 +116,7 @@ um.addEventListener('click', () => {
     dois.classList.add('soaparecequandoclica2');
     setTimeout(() => {
       dois.classList.remove('soaparecequandoclica2');
-    }, 2500);
+    }, 2900);
   });
 
   tres.addEventListener('click', () => {
@@ -231,4 +231,3 @@ const replay2 = document.querySelector(".replay2")
     location.reload()
 })
 
-iniciar.Audio()

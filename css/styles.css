@@ -384,11 +384,11 @@ body {
 }
 
 .morgan {
-    border-radius: 10px;
+    border-radius: 30px;
     width: 200px;
     height: 200px;
     background-size: cover;
-    background-image: url('../assets/woncat/wonpicture5.jpg');
+    background-image: url('../assets/woncat/morgan.jpg');
     
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
